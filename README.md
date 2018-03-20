@@ -10,7 +10,7 @@ Technical Stack used :-
 6. NodeJS and JSON
 7. AngularJS UI
 
-![alt text](https://lh3.googleusercontent.com/UR4MbdoFnFKRk90j7n2y8i_U8ZIkZNTNVuGGcFcXxXMenPXtF-0f5uo9FVFrc8SILNMs6rWxBBiuvPdNC7SiSOiiBpw=s272 =250x250)
+<img src="https://lh3.googleusercontent.com/UR4MbdoFnFKRk90j7n2y8i_U8ZIkZNTNVuGGcFcXxXMenPXtF-0f5uo9FVFrc8SILNMs6rWxBBiuvPdNC7SiSOiiBpw=s272" align="left" height="100" width="100">
 
 Before beginning, you need to ensure the system requirements are equipped with the required configurations. You need to download certain prerequisites and set up a basic development environment. Follow the links below to do those :
 
