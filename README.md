@@ -10,7 +10,7 @@ Technical Stack used :-
 6. NodeJS and JSON
 7. AngularJS UI
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://github.com/roychowdhuryrohit-dev/rajasthan-university-network/blob/master/Untitled-4.png)
 
 Before beginning, you need to ensure the system requirements are equipped with the required configurations. You need to download certain prerequisites and set up a basic development environment. Follow the links below to do those :
 
