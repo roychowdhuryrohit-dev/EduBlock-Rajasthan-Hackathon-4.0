@@ -1,0 +1,8 @@
+/** Queries for Student asset network
+*/
+query selectStudentByUnivRoll {
+  description: "Select student by unique university roll number."
+  statement:
+      SELECT edu.university.rajasthan.Student
+          WHERE (univRoll==_$roll)
+}

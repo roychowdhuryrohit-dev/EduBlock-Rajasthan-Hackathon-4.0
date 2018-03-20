@@ -1,0 +1,68 @@
+/**
+ * Model for university network
+ */
+
+namespace edu.university.rajasthan
+
+asset Student identified by univRoll {
+  o String univRoll
+  o String name
+  o String pName
+  o String phoneNo regex=/^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/
+  o String address
+  o Integer batch range=[1990,]
+  o Department enrolledDepartment
+  o Transcript[] transcriptList optional
+  o Boolean isEnrolled default=true
+  o DateTime lastUpdated optional
+}
+
+enum Department {
+  o COMPUTER_SCIENCE
+  o MECHANICAL_ENGINEERING
+  o ELECTRICAL_ENGINEERING
+  o INFORMATION_TECHNOLOGY
+  o CIVIL_ENGINEERING
+  o ELECTRONICS_AND_COMMUNICATION_ENGINEERING
+}
+
+concept Score {
+  o String subCode
+  o String subName
+  o String score
+}
+concept Transcript {
+  o Score[] scores
+  o Double cgpa
+  o Double sgpa
+  o Integer semNo
+}
+participant Client identified by clientId {
+  o String clientId 
+  o String clientName
+  o DateTime lastLogin
+}
+participant ViewerClient identified by viewerClientId {
+  o String viewerClientId
+  o String ViewerClientName
+  o DateTime lastLogin
+}
+transaction AddStudent {
+  --> Student student
+  --> Client client
+}
+transaction UpdateStudent {
+  --> Student student
+	--> Client client
+}
+transaction ViewStudent {
+  o String univRoll
+}
+event AddStudentNotification {
+  o String message
+  --> Student student
+}
+event UpdateStudentNotification {
+  o String message
+  --> Student student
+}

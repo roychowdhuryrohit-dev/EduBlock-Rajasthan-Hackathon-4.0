@@ -1,0 +1,23 @@
+/**Rules for Student asset network
+*/
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
+rule ClientUser {
+    description: "Grant REST clients full access to student asset"
+    participant: "edu.university.rajasthan.Client"
+    operation: CREATE,READ,UPDATE
+    resource: "edu.university.rajasthan.Student"
+    action: ALLOW
+}
+rule ViewerClientUser {
+    description: "Grant REST viewer client full view student asset"
+    participant: "edu.university.rajasthan.ViewerClient"
+    operation: READ
+    resource: "edu.university.rajasthan.Student"
+    action: ALLOW
+}
